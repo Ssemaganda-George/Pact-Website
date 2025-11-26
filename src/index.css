@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PACT Consultancy Design System
+   Professional consultancy design with navy, terracotta accents, and refined typography
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Background colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 15%; /* #282828 - dark gray text */
+
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 15%;
+
+    /* Popover surfaces */
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 15%;
+
+    /* Primary - Navy for professional corporate feel */
+    --primary: 215 25% 27%; /* Deep navy #334155 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Light gray surfaces */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 0 0% 15%;
+
+    /* Muted - Subtle backgrounds */
+    --muted: 210 20% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    /* Accent - Terracotta #A37B6D for elegant highlights */
+    --accent: 15 25% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive states */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and inputs */
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 15 25% 55%;
+
+    /* Border radius */
+    --radius: 0.5rem;
+
+    /* Custom design tokens */
+    --navy-dark: 215 30% 20%;
+    --navy-light: 215 25% 35%;
+    --terracotta: 15 25% 55%;
+    --text-primary: 0 0% 15%;
+    --text-secondary: 0 0% 40%;
+    --hero-overlay: 215 25% 27% / 0.03;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-semibold;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-semibold text-accent;
+  }
+
+  h3 {
+    @apply text-xl md:text-2xl font-medium text-foreground;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
